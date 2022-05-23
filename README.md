@@ -6,19 +6,37 @@ You can use any tools you like to help you complete the challenge. So if you've 
 
 Your users should be able to:
 
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Select a category. (defult: all);
-- Select a job type. (defult: all);
-- Enter a company name or not. (defult: null);
-- Enter a search phrase or not. (defult: null);
-- Submit form and see a list of relevant results.
+
+- Select a category. (default: all);
+- Select a job type. (default: all);
+- Enter a company name or not. (default: null);
+- Enter a tag name or not. (default: null);
+- Enter a search phrase or not. (default: null);
+- Submit the form and see a list of relevant results.
+- Sort results by: Date, Salary, 
 - Bookmarks a result. (save the result object in the local storage).
-- Go back to search panel easily and change the inputs.
+- Go back to the search panel easily and change the inputs.
 - See the list of bookmarks.
+- Submits Email address for newsletter subscription.
+
+
+## Workflow
+
+At the state of document.ready, fetch categories from the API. then set categories in the select input.
+
+In the event of search button click, initiate a call to the endpoint and fetch related data. Then use a loop on the response to create a result per each "job" object.
+
+Endopoint address: https://remotive.com/api/remote-jobs
+
+API Docs: https://github.com/remotive-com/remote-jobs-api
+
+Use https://www.actionforms.io/ to create the Email newsletter subscription.
+
+
 
 
 ## Where to find everything
+
 
 Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
 
